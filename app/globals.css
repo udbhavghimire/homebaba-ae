@@ -3,7 +3,7 @@
 #hero {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(rgba(74, 73, 73, 0.5), rgba(40, 37, 37, 0.2)), url("/dubai.jpg");
+    background: linear-gradient(rgba(92, 92, 92, 0.5), rgba(40, 37, 37, 0.2)), url("/dubai.jpg");
     background-size: cover;
     background-position: center;
     position: relative;
@@ -12,7 +12,7 @@
 #hero .hero-container {
     position: relative;
     display: flex;
-    height: 100vh;
+    height: 90vh;
     margin-left: 50px;
     margin-right: 50px;
     justify-content: center;
@@ -32,4 +32,211 @@
 .titlee {
     font-size: 2rem;
     color: #ffffff;
+}
+
+.navbar {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.navbar-nav .nav-item .nav-link {
+    font-weight: 400;
+    color: rgb(255, 255, 255) !important;
+    /* Set default color to white */
+}
+
+.logo span {
+    font-size: 30px;
+    font-weight: 800;
+    color: rgb(255, 255, 255);
+    /* Set default color to white */
+}
+
+.flogo span {
+    font-size: 30px;
+    font-weight: 800;
+    color: rgb(0, 0, 0);
+}
+
+.imghei {
+    background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%) !important;
+    background-size: 200% 100% !important;
+    animation: shine 1.5s linear infinite;
+    height: 320px !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    border-radius: 10px !important;
+    object-position: center !important;
+}
+
+.card {
+    padding: 0.6rem 0.5rem !important;
+    border: rgb(103, 103, 103) !important;
+    background-color: #ffffff !important;
+    box-shadow: 0 1rem 2rem hsla(180, 1%, 52%, .175) !important;
+}
+
+.img-text {
+    bottom: 5px;
+    background-color: #ffffff;
+    color: black;
+    z-index: 22;
+    font-weight: bold;
+    letter-spacing: 0.2px;
+    font-size: 1.3rem;
+}
+
+.tet-s {
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding-bottom: 6px;
+}
+
+.card-price {
+    font-size: 1.2rem;
+    color: #00b5d6;
+    font-weight: 500;
+    padding-bottom: 6px;
+}
+
+.afte-proj {
+    position: relative;
+    display: block;
+    transition: all 0.3s;
+}
+
+.afte-proj::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    z-index: 21;
+}
+
+.afte-proj:hover {
+    transform: scale(1.04);
+}
+
+.fw-mine {
+    font-weight: 800;
+}
+
+.footer {
+    background-color: #ffffff;
+    font-size: 14px;
+    padding-bottom: 50px;
+}
+
+.footer .footer-top {
+    padding-top: 50px;
+}
+
+.footer .footer-links {
+    margin-bottom: 30px;
+}
+
+.footer h4 {
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.footer .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer .footer-links ul li:first-child {
+    padding-top: 0;
+}
+
+.footer .footer-links ul li {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.footer .footer-links ul a {
+    color: black;
+    display: inline-block;
+    line-height: 1.2rem;
+}
+
+.textt {
+    justify-content: center;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.fields {
+    width: 100%;
+    padding: 1.3rem 1rem;
+    border: none;
+    border-radius: 7px;
+    background-color: #f1f3fa;
+}
+
+.fields:focus {
+    outline-color: black !important;
+}
+
+.btn-dark {
+    white-space: nowrap !important;
+}
+
+.footer-contact p {
+    margin-bottom: 3px;
+}
+
+.clients {
+    padding: 12px 0;
+    text-align: center;
+}
+
+.clients img {
+    height: 200px !important;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    padding: 15px 0;
+    height: 20px;
+    filter: grayscale(50);
+}
+
+.clients img:hover {
+    filter: none;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .main-titlee {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: #ffffff;
+        line-height: 1;
+        text-align: center;
+        font-family: "Helvetica Neue", sans-serif;
+    }
+    .titlee {
+        font-size: 1.2rem;
+        color: #ffffff;
+    }
+    #hero .hero-container {
+        position: relative;
+        display: flex;
+        height: 100vh;
+        margin-left: 10px;
+        margin-right: 10px;
+        justify-content: center;
+        flex-direction: column;
+    }
 }
