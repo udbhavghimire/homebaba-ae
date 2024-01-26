@@ -32,7 +32,7 @@ export default function Home() {
 
     <section className="pt-5 mt-5 mx-md-5">
     <div className="d-flex">
-   <div className="d-flex flex-column mb-5"> <h2 className="fw-mine   accent-line fs-2 float-start">
+   <div className="d-flex flex-column mb-3"> <h2 className="fw-mine   accent-line fs-2 float-start">
             Explore Our Recent Properties
           </h2>
           <p className="">Check out our recent properties for the best deal on homes, condos and commercial spaces.</p></div>
@@ -48,7 +48,45 @@ export default function Home() {
 </div>
 
 
+{/* cities */}
+
 <div className="pt-md-5 mt-md-5">
+<div className="d-flex pt-md-5">
+   <div className="d-flex flex-column mb-3 "> <h2 className="fw-mine   accent-line fs-2 float-start">
+            Explore Properties by City
+          </h2>
+          <p className="">Uncover Real Estate Marvels in Your Favorite Cities with our Exclusive Listings.
+</p></div>
+         <div className=" ms-auto">
+         <a href="" className="  btn btn-lg btn-outline-secondary">View All</a>
+         </div>
+    </div>
+<div className="row row-cols-md-4 ">
+        <div className="col px-3"><img
+        src="cities/dubai.webp"
+        alt="The Unionville Condos"
+        className="img-fluid rounded-mine cityimghei"
+      />
+       <div class ="img-text"><p class="img-text">Dubai</p></div></div>
+     <div className="col px-3"> <img
+        src="cities/ajamn.webp"
+        alt="The Unionville Condos"
+        className="img-fluid rounded-mine cityimghei"
+      /> <div class ="img-text"><p class="img-text">Ajman</p></div></div>
+       <div className="col px-3"><img
+        src="cities/abu-dhabi.webp"
+        alt="The Unionville Condos"
+        className="img-fluid rounded-mine cityimghei"
+      /> <div class ="img-text"><p class="img-text">Abu Dhabi</p></div></div>
+     <div className="col px-3"> <img
+        src="cities/sharjah.webp"
+        alt="The Unionville Condos"
+        className="img-fluid rounded-mine cityimghei"
+      /> <div class ="img-text"><p class="img-text">Sharjah</p></div></div>
+        </div>
+</div>
+
+<div className="py-md-5 mt-md-5 ">
 <section className="clients section-bg mb-5">
       <div className="container">
         <div
