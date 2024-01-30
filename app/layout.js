@@ -7,8 +7,8 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Pre Construction Developments for Sale in United Arab Emirates",
-  description: "Find the latest Pre Construction  developments for sale in United Arab Emirates with the United Arab Emirates's most user-friendly pre construction portal. Search new homes to buy from leading estate marketplace in United Arab Emirates.",
+  title: "Off Plan Properties for Sale in United Arab Emirates",
+  description: "Find the latest Off Plan Properties for sale in United Arab Emirates with the United Arab Emirates's most user-friendly off plan portal. Search new homes to buy from leading estate marketplace in United Arab Emirates.",
   viewport: {
     width: "device-width",
     initialScale: 1,

@@ -7,7 +7,7 @@ import FixedContactButton from "@/components/FixedContactButton";
 
 async function getData(city) {
   const res = await fetch(
-    "https://api.condomonk.ca/api/preconstructions-city/" + city,
+    "https://api.homebaba.ae/api/preconstructions-city/" + city,
     {
       next: { revalidate: 10 },
     }
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }, parent) {
   return {
     ...parent,
     alternates: {
-      canonical: `https://condomonk.ca/${params.city}`,
+      canonical: `https://homebaba.ae/${params.city}`,
     },
     title: data.preconstructions.length + " Preconstruction Condos in " + city,
     description: "Preconstruction Condos in " + city,
