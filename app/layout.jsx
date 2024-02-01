@@ -10,7 +10,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Off Plan Properties for Sale in United Arab Emirates",
-  description: "Find the latest Off Plan Properties for sale in United Arab Emirates with the United Arab Emirates's most user-friendly off plan portal. Search new homes to buy from leading estate marketplace in United Arab Emirates.",
+  description:
+    "Find the latest Off Plan Properties for sale in United Arab Emirates with the United Arab Emirates's most user-friendly off plan portal. Search new homes to buy from leading estate marketplace in United Arab Emirates.",
   viewport: {
     width: "device-width",
     initialScale: 1,
@@ -41,15 +42,15 @@ async function getCities() {
 export default async function RootLayout({ children }) {
   let cities = await getCities();
   return (
-    <>
-    
-    <Navbar cities={cities}></Navbar>
-     
-      
-     {children}
-
-     <Footer ></Footer>
-      </>
-     
+    <html lang="en">
+      <body className={inter.className}>
+        <Navbar cities={cities}> </Navbar> {children} <Footer> </Footer>{" "}
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          crossOrigin="anonymous"
+        ></script>{" "}
+      </body>{" "}
+    </html>
   );
 }
