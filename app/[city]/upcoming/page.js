@@ -10,7 +10,7 @@ import Link from "next/link";
 
 async function getData(city) {
   const res = await fetch(
-    "https://api.condomonk.ca/api/preconstructions-city/" +
+    "https://api.homebaba.ae/api/preconstructions-city/" +
       city +
       "?status=Upcoming&page_size=200",
     {
@@ -26,7 +26,7 @@ async function getData(city) {
 }
 
 async function getCities() {
-  const res = await fetch("https://api.condomonk.ca/api/all-city", {
+  const res = await fetch("https://api.homebaba.ae/api/all-city", {
     next: { revalidate: 10 },
   });
 
@@ -43,7 +43,7 @@ const CapitalizeFirst = (city) => {
 const retImage = (data) => {
   if (data.length > 0) {
     if (data[0].image.length > 0 && data[0].image[0].image) {
-      return `https://api.condomonk.ca${data[0].image[0].image}`;
+      return `https://api.homebaba.ae${data[0].image[0].image}`;
     }
   } else {
     return "/social/gta.webp";
@@ -56,16 +56,16 @@ export async function generateMetadata({ params }, parent) {
   return {
     ...parent,
     alternates: {
-      canonical: `https://condomonk.ca/${params.city}/upcoming/`,
+      canonical: `https://homebaba.ae/${params.city}/upcoming/`,
     },
     title:
       data.preconstructions.length +
-      " Upcoming Preconstruction Homes in " +
+      " Upcoming off plan propertys in " +
       city,
     openGraph: {
       images: retImage(data.preconstructions),
     },
-    description: `${city} upcoming pre construction TownHomes, Detached & Condos. Check out ${data.preconstructions.length}+ upcoming new construction homes on condomonk. Floor plans & pricing updated for upcoming new construction homes in ${city}`,
+    description: `${city} upcoming pre construction TownHomes, Detached & Condos. Check out ${data.preconstructions.length}+ upcoming new construction homes on Homebaba.ae. Floor plans & pricing updated for upcoming new construction homes in ${city}`,
   };
 }
 
@@ -141,7 +141,7 @@ export default async function Home({ params }) {
           <div className="container-fluid d-flex gap-2 flex-column align-items-center flex-md-row justify-content-md-start align-items-md-center fw-normal">
             <div className="d-flex">
               <h4 className="fs-6 fw-bold text-mine">
-                Hey condomonk! I am looking for
+                Hey Homebaba.ae! I am looking for
               </h4>
               <h4 className="fs-6 fw-bold d-flex align-items-center mx-1 border-bottom2">
                 All
@@ -214,11 +214,11 @@ export default async function Home({ params }) {
                 />
               </div>
               <h2 className="fw-bolder fw-boldie text-center px-md-4 fs-3">
-                Looking to buy a preconstruction home 
+                Looking to buy a off plan property 
                 ?
               </h2>
               <h2 className="fw-mine text-center px-md-4 fs-4">
-               Contact Condomonk now!
+               Contact Homebaba.ae now!
               </h2>
               <div className="row row-cols-1 row-cols-md-3 mt-5">
                 <div className="col-md-3"></div>

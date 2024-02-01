@@ -26,7 +26,7 @@ export default function CondoCard(props) {
     props.image.length > 0 ? (
       <Image
         loading="lazy"
-        src={`https://api.condomonk.ca${props.image[0].image}`}
+        src={`https://api.homebaba.ae${props.image[0].image}`}
         layout="responsive"
         className="img-fluid condocard-img-top"
         alt={`${props.project_name} located at ${props.project_address} image`}
@@ -48,7 +48,7 @@ export default function CondoCard(props) {
             {props.image.length > 0 ? (
               <img
                 loading="lazy"
-                src={`https://api.condomonk.ca${props.image[0].image}`}
+                src={`https://api.homebaba.ae${props.image[0].image}`}
                 layout="responsive"
                 className="img-fluid condocard-img-top"
                 alt={`${props.project_name} located at ${props.project_address} image`}

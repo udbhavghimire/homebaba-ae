@@ -3,12 +3,14 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Condotest from "@/components/Condotest";
 import CondoCardHome from "@/components/CondoCardHome";
+import Link from "next/link";
+
 
 export default function Home() {
   return (
     <div>
       <div id="hero">
-        <Navbar />
+       
         <div className="container">
           <div className=" hero-container">
             <div>
@@ -48,7 +50,7 @@ export default function Home() {
             </div>
           </div>
           <div className="row row-cols-md-4 gy-3">
-            <div className="col px-3">
+           <Link href ={"/dubai"} className="text-decoration-none"> <div className="col px-3">
               <img
                 src="cities/dubai.webp"
                 alt="Dubai"
@@ -57,8 +59,9 @@ export default function Home() {
               <div class="img-text">
                 <p class="img-text">Dubai</p>
               </div>
-            </div>
-            <div className="col px-3">
+            </div></Link>
+            
+            <Link  href ={"/ajman"} className="text-decoration-none"><div className="col px-3">
               {" "}
               <img
                 src="cities/ajamn.webp"
@@ -68,8 +71,8 @@ export default function Home() {
               <div class="img-text">
                 <p class="img-text">Ajman</p>
               </div>
-            </div>
-            <div className="col px-3">
+            </div></Link>
+           <Link href ={"/abu-dhabi"} className="text-decoration-none"> <div className="col px-3">
               <img
                 src="cities/abu-dhabi.webp"
                 alt="Abu Dhabi"
@@ -79,7 +82,8 @@ export default function Home() {
                 <p class="img-text">Abu Dhabi</p>
               </div>
             </div>
-            <div className="col px-3">
+            </Link>
+            <Link href ={"/sharjah"} className="text-decoration-none"><div className="col px-3">
               {" "}
               <img
                 src="cities/sharjah.webp"
@@ -89,8 +93,9 @@ export default function Home() {
               <div class="img-text">
                 <p class="img-text">Sharjah</p>
               </div>
-            </div>
-            <div className="col px-3">
+              
+            </div></Link>
+           <Link href ={"/ras-al-kjaimah"} className="text-decoration-none"> <div className="col px-3">
               {" "}
               <img
                 src="cities/ras-al-khaimah.webp"
@@ -99,9 +104,10 @@ export default function Home() {
               />{" "}
               <div class="img-text">
                 <p class="img-text">Ras Al Khaimah</p>
-              </div>
-            </div>
-            <div className="col px-3">
+              </div
+              >
+            </div></Link>
+            <Link href ={"/umm-al-quwain"} className="text-decoration-none"><div className="col px-3">
               {" "}
               <img
                 src="cities/umm-al-quwain.webp"
@@ -111,8 +117,9 @@ export default function Home() {
               <div class="img-text">
                 <p class="img-text">Umm Al Quwain</p>
               </div>
-            </div>
-            <div className="col px-3">
+              
+            </div></Link>
+           <Link href ={"/al-ain"} className="text-decoration-none"> <div className="col px-3">
               {" "}
               <img
                 src="cities/al-ain.webp"
@@ -121,9 +128,10 @@ export default function Home() {
               />{" "}
               <div class="img-text">
                 <p class="img-text">Al Ain</p>
-              </div>
-            </div>
-            <div className="col px-3">
+              </div
+              >
+            </div></Link>
+            <Link href ={"/fujairah"} className="text-decoration-none"><div className="col px-3">
               {" "}
               <img
                 src="cities/fujairah.webp"
@@ -133,7 +141,8 @@ export default function Home() {
               <div class="img-text">
                 <p class="img-text">Fujairah</p>
               </div>
-            </div>
+              
+            </div></Link>
           </div>
         </div>
 

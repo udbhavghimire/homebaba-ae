@@ -13,7 +13,7 @@ const Navbar = ({ cities, dropdown_cities }) => {
   // }
 
   return (
-    <nav className="navbar navbar-expand-lg sticky-top navbarr">
+    <nav className="navbar navbar-expand-lg  sticky-top">
       <div className="container-fluid  justify-content-start mx-md-5 mx-0">
       <div className="d-flex">
       <Link href="/" className="logo d-flex justify-content-center align-items-center pe-1 text-decoration-none">
@@ -62,7 +62,7 @@ const Navbar = ({ cities, dropdown_cities }) => {
           <ul className="navbar-nav ms-auto mt-2 mt-lg-0">
             <li className="nav-item dropdown">
               <a
-                className="nav-link dropdown-toggle active fw-medium shadow-lg"
+                className="nav-link dropdown-toggle active fw-medium shadow-sm"
                 href="#"
                 id="dropdownId"
                 data-bs-toggle="dropdown"
