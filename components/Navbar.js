@@ -97,7 +97,7 @@ const Navbar = ({ cities, dropdown_cities }) => {
             </li>
            
             <li className="nav-item">
-              <a className="nav-link" href="#contact">
+              <a className="nav-link" href="#mycontact">
                 Contact
               </a>
             </li>
@@ -105,7 +105,7 @@ const Navbar = ({ cities, dropdown_cities }) => {
           <button 
             className="btn btn-dark my-2 my-sm-0 rounded ms-md-4 py-2 px-3"
             type="submit" 
-          > <a className="nav-link" href="#contact">
+          > <a className="nav-link" href="#mycontact">
             Call Now
             </a>
           </button>

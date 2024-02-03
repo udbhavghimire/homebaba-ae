@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Condotest from "@/components/Condotest";
 import CondoCardHome from "@/components/CondoCardHome";
+import BottomContactForm from "@/components/BottomContactForm";
 import Link from "next/link";
 
 
@@ -30,12 +31,12 @@ export default function Home() {
         </div>
       </div>
 
-      <section className=" mx-md-5">
+      <section className=" mx-md-5 mx-2">
       <div className="pt-md-5 mt-md-5">
-          <div className="d-flex pt-md-5">
+          <div className="d-flex pt-5 justify-content-center align-items-center text-center">
             <div className="d-flex flex-column mb-3 ">
               {" "}
-              <h2 className="fw-mine   accent-line fs-2 float-start">
+              <h2 className="fw-mine  accent-line fs-2  ">
                 Explore Properties by City
               </h2>
               <p className="">
@@ -43,14 +44,10 @@ export default function Home() {
                 Exclusive Listings.
               </p>
             </div>
-            <div className=" ms-auto">
-              <a href="" className="  btn btn-lg btn-outline-secondary">
-                View All
-              </a>
-            </div>
+            
           </div>
-          <div className="row row-cols-md-4 gy-3">
-           <Link href ={"/dubai"} className="text-decoration-none"> <div className="col px-3">
+          <div className="row row-cols-md-4 row-cols-sm-2 row-cols-2 gx-4">
+           <Link href ={"/dubai"} className="text-decoration-none"> <div className="col ">
               <img
                 src="cities/dubai.webp"
                 alt="Dubai"
@@ -61,7 +58,7 @@ export default function Home() {
               </div>
             </div></Link>
             
-            <Link  href ={"/ajman"} className="text-decoration-none"><div className="col px-3">
+            <Link  href ={"/ajman"} className="text-decoration-none"><div className="col ">
               {" "}
               <img
                 src="cities/ajamn.webp"
@@ -72,7 +69,7 @@ export default function Home() {
                 <p class="img-text">Ajman</p>
               </div>
             </div></Link>
-           <Link href ={"/abu-dhabi"} className="text-decoration-none"> <div className="col px-3">
+           <Link href ={"/abu-dhabi"} className="text-decoration-none"> <div className="col ">
               <img
                 src="cities/abu-dhabi.webp"
                 alt="Abu Dhabi"
@@ -83,7 +80,7 @@ export default function Home() {
               </div>
             </div>
             </Link>
-            <Link href ={"/sharjah"} className="text-decoration-none"><div className="col px-3">
+            <Link href ={"/sharjah"} className="text-decoration-none"><div className="col ">
               {" "}
               <img
                 src="cities/sharjah.webp"
@@ -95,7 +92,7 @@ export default function Home() {
               </div>
               
             </div></Link>
-           <Link href ={"/ras-al-kjaimah"} className="text-decoration-none"> <div className="col px-3">
+           <Link href ={"/ras-al-kjaimah"} className="text-decoration-none"> <div className="col ">
               {" "}
               <img
                 src="cities/ras-al-khaimah.webp"
@@ -107,7 +104,7 @@ export default function Home() {
               </div
               >
             </div></Link>
-            <Link href ={"/umm-al-quwain"} className="text-decoration-none"><div className="col px-3">
+            <Link href ={"/umm-al-quwain"} className="text-decoration-none"><div className="col ">
               {" "}
               <img
                 src="cities/umm-al-quwain.webp"
@@ -119,7 +116,7 @@ export default function Home() {
               </div>
               
             </div></Link>
-           <Link href ={"/al-ain"} className="text-decoration-none"> <div className="col px-3">
+           <Link href ={"/al-ain"} className="text-decoration-none"> <div className="col ">
               {" "}
               <img
                 src="cities/al-ain.webp"
@@ -131,7 +128,7 @@ export default function Home() {
               </div
               >
             </div></Link>
-            <Link href ={"/fujairah"} className="text-decoration-none"><div className="col px-3">
+            <Link href ={"/fujairah"} className="text-decoration-none"><div className="col ">
               {" "}
               <img
                 src="cities/fujairah.webp"
@@ -147,10 +144,10 @@ export default function Home() {
         </div>
 
      <section className="pt-md-5">
-     <div className="d-flex pt-5 mt-5">
-          <div className="d-flex flex-column mb-3">
+     <div className="d-flex pt-5 mt-5 justify-content-center align-items-center text-center">
+          <div className="d-flex flex-column mb-3 ">
             {" "}
-            <h2 className="fw-mine   accent-line fs-2 float-start">
+            <h2 className="fw-mine   accent-line fs-2 ">
               Check out Off-Plan Properties in Dubai
             </h2>
             <p className="">
@@ -158,13 +155,9 @@ export default function Home() {
               and commercial spaces.
             </p>
           </div>
-          <div className=" ms-auto">
-            <a href="" className="  btn btn-lg btn-outline-secondary">
-              View All
-            </a>
-          </div>
+          
         </div>
-        <div className="row row-cols-md-4 row-col-4">
+        <div className="row row-cols-md-4 row-cols-1">
           <div className="col">
             <Condotest />
           </div>
@@ -191,7 +184,7 @@ export default function Home() {
                 data-aos="fade-up"
                 data-aos-duration="2000"
               >
-                <div className=" text-center pb-5">
+                <div className=" text-center pb-4 ">
                   <h1 className="pt-5 mt-4 pb-2  fw-bold fs-1 mb-0">
                     Trusted Homes from Credible Builders
                   </h1>
@@ -200,41 +193,102 @@ export default function Home() {
                     from Credible Builders
                   </p>
                 </div>
-                <div className="row row-cols-md-4 ">
-                  <div className="col px-5">
+                <div className="row row-cols-3 row-cols-lg-4">
+                  <div className="col  ">
                     <img
-                      src="/builder1.jpg"
-                      alt="The Unionville Condos"
-                      className="img-fluid rounded-mine imghei"
+                      src="/builders/OP_logo-01.webp"
+                      alt="EMAAR"
+                      className="img-fluid rounded-mine "
                     />
                   </div>
-                  <div className="col px-5">
+                  <div className="col  ">
                     {" "}
                     <img
-                      src="/builder1.jpg"
-                      alt="The Unionville Condos"
-                      className="img-fluid rounded-mine imghei"
+                      src="/builders/43.png"
+                      alt="Al Habtoor City"
+                      className="img-fluid rounded-mine "
                     />
                   </div>
-                  <div className="col px-5">
-                    <img
-                      src="/builder1.jpg"
-                      alt="The Unionville Condos"
-                      className="img-fluid rounded-mine imghei"
-                    />
-                  </div>
-                  <div className="col px-5">
+                  <div className="col  ">
                     {" "}
                     <img
-                      src="/builder1.jpg"
-                      alt="The Unionville Condos"
-                      className="img-fluid rounded-mine imghei"
+                      src="/builders/OP_logo-03.webp"
+                      alt="Damac"
+                      className="img-fluid rounded-mine "
                     />
                   </div>
+                  <div className="col  ">
+                    {" "}
+                    <img
+                      src="/builders/OP_logo-08.webp"
+                      alt="Dubai Properties"
+                      className="img-fluid rounded-mine "
+                    />
+                  </div>
+                  <div className="col  ">
+                    <img
+                      src="/builders/OP_logo-04.webp"
+                      alt="Nshama"
+                      className="img-fluid rounded-mine "
+                    />
+                  </div>
+                  <div className="col  ">
+                    {" "}
+                    <img
+                      src="/builders/OP_logo-09.png"
+                      alt="Azizi"
+                      className="img-fluid rounded-mine "
+                    />
+                  </div>
+                  <div className="col  ">
+                    {" "}
+                    <img
+                      src="/builders/OP_logo-16.webp"
+                      alt="Meraas"
+                      className="img-fluid rounded-mine "
+                    />
+                  </div>
+                  
+                  <div className="col  ">
+                    {" "}
+                    <img
+                      src="/builders/17.webp"
+                      alt="Dubai South"
+                      className="img-fluid rounded-mine "
+                    />
+                  </div>
+                 
                 </div>
               </div>
             </div>
+
+          
           </section>
+
+          <div className="py-5 my-5" id="mycontact">
+            <div className="container-fluid">
+              <div className="row justify-content-center">
+                <img
+                  src="/contact-bottom-2.png"
+                  alt="dce"
+                  className="img-fluid w-25 w-smm-50 mb-3"
+                />
+              </div>
+              <h2 className="fw-mine text-center px-md-4 fs-4">
+                Contact Homebaba.ae  Today
+              </h2>
+              <div className="row row-cols-1 row-cols-md-3 mt-5">
+                <div className="col-md-3"></div>
+                <div className="col-md-6">
+                  <BottomContactForm
+                    proj_name="All"
+                    city="Preconstruction Homes Page"
+                  ></BottomContactForm>
+                </div>
+                <div className="col-md-3"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>

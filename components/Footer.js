@@ -10,8 +10,14 @@ const Footer = ({ cities }) => {
   }
   return (
     <footer className="footer mt-5 shadow-lg">
-      <div className="container footer-top">
-        <div className="text-center pt-5">
+      <div className="container footer-top ">
+        <div className=" newsletetrbg">
+         <div className="d-md-block d-none">
+         <img src="/arrow1.png" className="img-fluid arrow" alt="" />
+         <img src="/newsletter-img.png" className="img-fluid nesletter-img" alt="" />
+         </div>
+         
+        <div className="text-center pt-5 ">
           <p className="fs-2 fw-bold">Get Exclusive Preconstruction Updates.</p>
           <p className="textt">
             Be the First to Know! Subscribe to Our Newsletter and Receive Timely
@@ -36,9 +42,10 @@ const Footer = ({ cities }) => {
             </div>
           </form>
         </div>
-        <div className="  pt-5 mt-md-5 mt-0">
-          <div className=" footer-links">
-            <h3 className="text-center fw-bold pb-4">
+        </div>
+        <div className="  pt-5 mt-md-5 pt-md-5 ">
+          <div className=" footer-links ">
+            <h3 className="text-center fw-bold py-4 ">
               {" "}
               Off Plan Properties in UAE
             </h3>
