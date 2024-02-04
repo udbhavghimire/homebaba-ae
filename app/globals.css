@@ -1854,7 +1854,7 @@ label {
 }
 
 .btn-call {
-    background-color: #012970 !important;
+    background-color: #FF5757 !important;
     color: #ffffff/*ff6200*/
     !important;
     transition: background-color 0.2s ease-in-out;
