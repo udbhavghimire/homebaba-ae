@@ -1625,14 +1625,6 @@ label {
     border-bottom-left-radius: 10px;
 }
 
-.grid-cont {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 8px 8px;
-    z-index: 98 !important;
-}
-
 .g-item {
     transition: transform 0.5s ease-in-out;
 }
@@ -1660,6 +1652,14 @@ label {
 .grid-item6,
 .grid-item7 {
     height: 200px !important;
+}
+
+.grid-cont>div:first-child {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 8px 8px;
+    z-index: 98 !important;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 .footer {

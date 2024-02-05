@@ -12,11 +12,15 @@ export const metadata = {
   title: "Off Plan Properties for Sale in United Arab Emirates",
   description:
     "Find the latest Off Plan Properties for sale in United Arab Emirates with the United Arab Emirates's most user-friendly off plan portal. Search new homes to buy from leading estate marketplace in United Arab Emirates.",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-  },
+    icons: {
+      icon: "/favicon.ico",
+      shortcut: "/favicon-16x16.png",
+      apple: "/apple-touch-icon.png",
+    }, viewport: {
+      width: "device-width",
+      initialScale: 1,
+      maximumScale: 1,
+    },
   robots: {
     index: true,
     follow: true,
