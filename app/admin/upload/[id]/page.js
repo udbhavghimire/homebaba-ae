@@ -416,7 +416,7 @@ export default function Update({ params }) {
             <Link href="/admin/" className="btn bg-white shadow">
               Go Back
             </Link>
-            <h4 className="fw-bold">Upload New Pre Construction</h4>
+            <h4 className="fw-bold">Upload New Off Plan</h4>
           </div>
         </div>
         <div className="container-fluid px-minn py-5 mydetaill">
@@ -512,6 +512,7 @@ export default function Update({ params }) {
                     >
                       <option value="Selling">Selling</option>
                       <option value="Upcoming">Upcoming</option>
+                      <option value="Archived">Archived</option>
                       <option value="Sold out">Sold out</option>
                       <option value="Planning Phase">Planning Phase</option>
                     </select>

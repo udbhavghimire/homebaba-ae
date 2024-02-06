@@ -1,32 +1,35 @@
 "use client";
-import { useState, useEffect } from "react";
-import Link from "next/link";
-// import SearchBar from "./SearchBar";
-// import SearchSuggest from "./SerachSuggest";
+import { useState } from "react";
+import SearchBar from "./SearchBar";
 
+//LIB
+import Link from "next/link";
+import SearchSuggest from "./SerachSuggest";
 
 const Navbar = ({ cities, dropdown_cities }) => {
   const [cityname, setCityname] = useState("");
 
-  // if (pathname.startsWith("/admin")) {
-  //   return <></>;
-  // }
+  const filteredprojects = (value) => {
+    return dropdown_cities.filter((city) => {
+      return value.includes(city.name);
+    });
+  };
 
   return (
-    <nav className="navbar navbar-expand-lg  sticky-top">
-      <div className="container-fluid  justify-content-start mx-md-5 mx-0">
-      <div className="d-flex">
-      <Link href="/" className="logo d-flex justify-content-center align-items-center pe-1 text-decoration-none">
-          <span>Homebaba.ae</span>
+    <nav className="navbar navbar-expand-sm navbar-light bg-white py-3 py-md-2 shadow-navbar mb-3 sticky-top">
+      <div className="container-fluid justify-content-start">
+        <Link href="/" className="logo">
+          <img src="/logo2.svg" alt="Dolphy logo" className="img-fluid" />
         </Link>
-        <div className="input-group input-group-search mx-1 me-md-0">
-          {/* <SearchSuggest  cities={cities} /> */}
+        <div className="input-group input-group-search me-2 me-md-0">
+          {/* <SearchBar changeCity={setCityname} cities={cities} /> */}
+          <SearchSuggest cities={cities} />
           {/* <Link
-            href={"/" + cityname.toLowerCase()}
+            href={"/off-plan-properties/" + cityname.toLowerCase()}
             className="d-none d-md-inline"
           >
             <button
-              className="input-group-text btn bg-light2 bg-lh d-block"
+              className="input-group-text btn bg-light2 bg-lh mybtn d-block py-search"
               type="button"
               aria-label="Search Button"
             >
@@ -47,7 +50,7 @@ const Navbar = ({ cities, dropdown_cities }) => {
           </Link> */}
         </div>
         <button
-          className="navbar-toggler d-lg-none"
+          className="navbar-toggler d-lg-none ms-auto"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#collapsibleNavId"
@@ -55,60 +58,138 @@ const Navbar = ({ cities, dropdown_cities }) => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <img
+            loading="lazy"
+            src="https://img.icons8.com/material-two-tone/24/000000/menu.png"
+            width="24px"
+            height="24px"
+            alt="Navbar toggler icon"
+          />
         </button>
-      </div>
         <div className="collapse navbar-collapse" id="collapsibleNavId">
-          <ul className="navbar-nav ms-auto mt-2 mt-lg-0">
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle active fw-medium shadow-sm"
-                href="#"
-                id="dropdownId"
+          <ul className="navbar-nav ms-auto mt-2 mt-lg-0 align-items-center align-items-md-center">
+            <li className="nav-item dropdown dropdown-fullwidth">
+              {/* <button
+                className="nav-link dropdown-toggle align-items-center d-flex shadow-lg fw-500 text-dark me-3 px-2"
                 data-bs-toggle="dropdown"
                 aria-haspopup="true"
-                aria-expanded="false"
+                aria-expanded="true"
               >
-               Cities
-              </a>
-              <div className="dropdown-menu mt-1 " aria-labelledby="dropdownId">
-                <div className="container">
-                  <div className="row row-cols-md-3 row-cols-3">
-                    {cities &&
-                      cities.map((city) => (
-                        <div className="col" key={city.id}>
-                          <Link
-                            className="dropdown-item"
-                            href={`/${city.slug}`}
-                          >
+                Cities
+                <img
+                  src="/dropdown.svg"
+                  alt="dropdown icon"
+                  className="img-fluid dropdown-nav-icon ms-1"
+                />
+              </button> */}
+              <div
+                className="dropdown-menu dropdown-menu-end border-0 show"
+                data-bs-popper="static"
+              >
+                <div className="row p-3 pt-2 dopp">
+                  {dropdown_cities &&
+                    filteredprojects([
+                      "Toronto",
+                      "Calgary",
+                      "Mississauga",
+                      "Brampton",
+                      "Ajax",
+                      "Burlington",
+                      "Kitchener",
+                      "Hamilton",
+                      "Oakville",
+                      "Milton",
+                      "Niagara",
+                      "Vaughan",
+                    ]).map((city, no) => (
+                      <div className="col-12 col-sm-6 col-md-3 mb-4" key={no}>
+                        <Link
+                          className="link-black"
+                          href={`/off-plan-properties/${city.slug}/`}
+                        >
+                          <h5 className="mb-1 fw-mine fs-smaller fs-4">
                             {city.name}
-                          </Link>
-                        </div>
-                      ))}
+                          </h5>
+                        </Link>
+                        <ul className="list-unstyled ll">
+                          {city.preconstructions &&
+                            city.preconstructions.length > 0 &&
+                            city.preconstructions
+                              .slice(0, 5)
+                              .map((project, no) => (
+                                <li key={no}>
+                                  <Link
+                                    className="dropdown-item link-black text-limit"
+                                    href={`/off-plan-properties/${city.slug}/${project.slug}`}
+                                  >
+                                    {project.project_name}
+                                  </Link>
+                                </li>
+                              ))}
+                        </ul>
+                      </div>
+                    ))}
+                  <hr />
+                  <div className="col-12">
+                    <Link
+                      className="btn btn-white link-black fw-bold p-0"
+                      href={"/off-plan-properties/"}
+                    >
+                      List of all cities and off plan properties in UAE
+                      <i className="bi bi-arrow-right ms-2"></i>
+                    </Link>
                   </div>
                 </div>
               </div>
             </li>
-           
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Blogs
-              </a>
+              <Link
+                href={"/off-plan-properties/calgary/"}
+                className="nav-link"
+              >
+                Calgary's Top Preconstruction
+              </Link>
             </li>
-           
             <li className="nav-item">
-              <a className="nav-link" href="#mycontact">
+              <Link
+                href={"/off-plan-properties/builders/"}
+                className="nav-link"
+              >
+                Builders
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" href="/blogs">
+                Blogs
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="#mycontact" className="nav-link">
                 Contact
-              </a>
+              </Link>
+            </li>
+            <li className="nav-item d-flex flex-column">
+              <Link
+                href="tel:5878872572"
+                className="btn my-2 my-sm-0 ms-md-3 d-flex text-dark gap-1"
+              >
+                <img
+                  src="/COA-agent-pic.jpg"
+                  alt="agent pic"
+                  className="img-fluid img-call-height"
+                />
+                <span
+                  className="d-flex flex-column justify-content-start utility__phone-msg"
+                  id="utility__phone-msg"
+                >
+                  <b id="utility__phone-number text-dark">(587) 887-2572</b>
+                  <span className="d-block travel__expert fs-vsmall">
+                    Speak to a home expert
+                  </span>
+                </span>
+              </Link>
             </li>
           </ul>
-          <button 
-            className="btn btn-dark my-2 my-sm-0 rounded ms-md-4 py-2 px-3"
-            type="submit" 
-          > <a className="nav-link" href="#mycontact">
-            Call Now
-            </a>
-          </button>
         </div>
       </div>
     </nav>

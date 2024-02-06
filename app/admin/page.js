@@ -84,93 +84,93 @@ export default function Home() {
 
   return (
     <>
-    <div className="py-4 w-100 ">
-      <div className="row row-cols-1 row-cols-md-5 d-flex align-items-center mx-0">
-        <div className="col-md-3">
-          <div className="form-floating">
-            <select
-              className="form-select"
-              id="floatingCity"
-              value={filters.city}
-              onChange={(e) => handleChange(e)}
-              aira-label="Floating label select example"
-            >
-              <option value="All">All</option>
-              <option value="Toronto">Toronto</option>
-            </select>
-            <label htmlFor="floatingCity">Select City</label>
+      <div className="py-4 w-100 ">
+        <div className="row row-cols-1 row-cols-md-5 d-flex align-items-center mx-0">
+          <div className="col-md-3">
+            <div className="form-floating">
+              <select
+                className="form-select"
+                id="floatingCity"
+                value={filters.city}
+                onChange={(e) => handleChange(e)}
+                aira-label="Floating label select example"
+              >
+                <option value="All">All</option>
+                <option value="Toronto">Toronto</option>
+              </select>
+              <label htmlFor="floatingCity">Select City</label>
+            </div>
           </div>
-        </div>
-        <div className="col-md-3">
-          <div className="form-floating">
-            <select
-              className="form-select"
-              id="typee"
-              value={filters.typee}
-              onChange={(e) => handleChange(e)}
-              aira-label="Floating label select example"
-            >
-              <option value="All">All</option>
-              <option value="Condo">Condo</option>
-              <option value="Townhome">Townhome</option>
-              <option value="Detached">Detached</option>
-              <option value="Semi-Detached">Semi-Detached</option>
-            </select>
-            <label htmlFor="typee">Select Project Type</label>
+          <div className="col-md-3">
+            <div className="form-floating">
+              <select
+                className="form-select"
+                id="typee"
+                value={filters.typee}
+                onChange={(e) => handleChange(e)}
+                aira-label="Floating label select example"
+              >
+                <option value="All">All</option>
+                <option value="Condo">Condo</option>
+                <option value="Townhome">Townhome</option>
+                <option value="Detached">Detached</option>
+                <option value="Semi-Detached">Semi-Detached</option>
+              </select>
+              <label htmlFor="typee">Select Project Type</label>
+            </div>
           </div>
-        </div>
-        <div className="col-md-3">
-          <div className="form-floating">
-            <select
-              className="form-select"
-              id="status"
-              value={filters.status}
-              onChange={(e) => handleChange(e)}
-              aira-label="Floating label select example"
-            >
-              <option value="All">All</option>
-              <option value="Upcoming">Upcoming</option>
-              <option value="Selling">Selling</option>
-              <option value="Sold out">Sold out</option>
-            </select>
-            <label htmlFor="status">Select Status</label>
+          <div className="col-md-3">
+            <div className="form-floating">
+              <select
+                className="form-select"
+                id="status"
+                value={filters.status}
+                onChange={(e) => handleChange(e)}
+                aira-label="Floating label select example"
+              >
+                <option value="All">All</option>
+                <option value="Upcoming">Upcoming</option>
+                <option value="Selling">Selling</option>
+                <option value="Sold out">Sold out</option>
+              </select>
+              <label htmlFor="status">Select Status</label>
+            </div>
           </div>
-        </div>
-        <div className="col-md-3 d-flex justify-content-end">
-          <Link href="/admin/upload/" className="btn btn-success py-3">
-            Add New Preconstruction
-          </Link>
+          <div className="col-md-3 d-flex justify-content-end">
+            <Link href="/admin/upload/" className="btn btn-success py-3">
+              Add New Preconstruction
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
-    <div className="d-flex justify-content-between align-items-center">
-      <button
-        className="btn btn-lg btn-dark me-4"
-        onClick={() => setPage(page - 1)}
-        disabled={page === 1}
-      >
-        <i className="bi bi-arrow-left me-2"></i>
-        Previous Page
-      </button>
-      <span className="fw-bold">
-        Page {page} of {totalPages}
-      </span>
-      <button
-        className="btn btn-lg btn-dark"
-        onClick={() => setPage(page + 1)}
-        disabled={page === totalPages}
-      >
-        Next Page
-        <i className="bi bi-arrow-right ms-2"></i>
-      </button>
-    </div>
-    <div className="mt-4"></div>
-    <ListingTable
-      preconstructions={preconstructions}
-      handleDelete={handleDelete}
-      filters={filters}
-      setFilters={setFilters}
-    ></ListingTable>
-  </>
+      <div className="d-flex justify-content-between align-items-center">
+        <button
+          className="btn btn-lg btn-dark me-4"
+          onClick={() => setPage(page - 1)}
+          disabled={page === 1}
+        >
+          <i className="bi bi-arrow-left me-2"></i>
+          Previous Page
+        </button>
+        <span className="fw-bold">
+          Page {page} of {totalPages}
+        </span>
+        <button
+          className="btn btn-lg btn-dark"
+          onClick={() => setPage(page + 1)}
+          disabled={page === totalPages}
+        >
+          Next Page
+          <i className="bi bi-arrow-right ms-2"></i>
+        </button>
+      </div>
+      <div className="mt-4"></div>
+      <ListingTable
+        preconstructions={preconstructions}
+        handleDelete={handleDelete}
+        filters={filters}
+        setFilters={setFilters}
+      ></ListingTable>
+    </>
   );
 }

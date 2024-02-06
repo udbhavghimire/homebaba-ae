@@ -4,7 +4,6 @@ import CityTable from "@/components/CityTable";
 import axios from "axios";
 import swal from "sweetalert";
 import dynamic from "next/dynamic";
-
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
 export default function Cities() {

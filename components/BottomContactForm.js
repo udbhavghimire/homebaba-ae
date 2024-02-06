@@ -1,15 +1,19 @@
 "use client";
 import { useState } from "react";
 import ContactFormSubmit from "./ContactFormSubmit";
+import { useRouter } from "next/navigation";
 
 export default function BottomContactForm(props) {
   const [submitbtn, setSubmitbtn] = useState("Send a message");
+  const router = useRouter();
   const [credentials, setCredentials] = useState({
     name: "",
     phone: "",
     email: "",
     realtor: "No",
     message: props.defaultmessage,
+    proj_name: props.proj_name,
+    city: props.city,
   });
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -21,7 +25,9 @@ export default function BottomContactForm(props) {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     console.log(credentials);
-    ContactFormSubmit(credentials, setSubmitbtn, setCredentials);
+    ContactFormSubmit(credentials, setSubmitbtn, setCredentials)
+      .then((res) => router.push("/thank-you"))
+      .catch((err) => console.log(err));
   };
   return (
     <form
@@ -78,7 +84,7 @@ export default function BottomContactForm(props) {
           <div className="mb-2">
             <div className="form-floating">
               <select
-                className="form-select "
+                className="form-select"
                 id="realtor"
                 aria-label="Floating label select example"
                 value={credentials.realtor}
@@ -109,14 +115,14 @@ export default function BottomContactForm(props) {
           ></textarea>
         </div>
       </div>
-     <div className=" text-center">
-     <input
-        type="submit"
-        value={submitbtn}
-        className="btn btn-call btn-lg  mb-2"
-        id="subbtn"
-      />
-     </div>
+      <div className="d-flex justify-content-center">
+        <input
+          type="submit"
+          value={submitbtn}
+          className="btn btn-call btn-lg mb-2"
+          id="subbtn"
+        />
+      </div>
     </form>
   );
 }

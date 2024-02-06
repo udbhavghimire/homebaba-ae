@@ -17,7 +17,6 @@ export default function Gallery(props) {
     let neImgs = images;
     neImgs.forEach((image) => {
       image.image = "https://api.homebaba.ae" + image.image;
-      
     });
     for (let i = images.length; i < 7; i++) {
       neImgs.push({
